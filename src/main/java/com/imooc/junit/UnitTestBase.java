@@ -2,6 +2,8 @@ package com.imooc.junit;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.util.StringUtils;
 
@@ -11,6 +13,7 @@ import org.springframework.util.StringUtils;
  * @author yangchaozheng
  * @date 2019/11/27 13:19
  */
+@RunWith(BlockJUnit4ClassRunner.class)
 public class UnitTestBase<T> {
 
     private ClassPathXmlApplicationContext context;
