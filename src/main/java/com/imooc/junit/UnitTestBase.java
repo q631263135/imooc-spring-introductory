@@ -45,4 +45,8 @@ public class UnitTestBase<T> {
     public T getBean(String beanName) {
         return (T) context.getBean(beanName);
     }
+
+    public T getBean(Class<T> clazz) {
+        return (T) context.getBean(clazz);
+    }
 }

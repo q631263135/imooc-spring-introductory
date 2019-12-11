@@ -2,12 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
->
+        default-autowire="byType">
     
-    <!-- byName -->
-    <import resource="spring-autowire/spring-autowire1.xml"/>
-    
-    <!-- byType -->
-    <import resource="spring-autowire/spring-autowire2.xml"/>
-    
+    <bean class="com.imooc.autowire.AutowireBean3"/>
+    <bean class="com.imooc.autowire.AutowireBean4"/>
 </beans>

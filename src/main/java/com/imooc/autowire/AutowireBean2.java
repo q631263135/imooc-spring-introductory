@@ -9,13 +9,13 @@ package com.imooc.autowire;
 public class AutowireBean2 {
 
     public void setAutowireBean1(AutowireBean1 autowireBean1) {
-        this.autowireBean1 = autowireBean1;
+        this.autowireBean = autowireBean1;
     }
 
-    private AutowireBean1 autowireBean1;
+    private AutowireBean1 autowireBean;
 
     public void sayHello() {
         System.out.println("AutowireBean2 say hello.");
-        autowireBean1.sayHello();
+        autowireBean.sayHello();
     }
 }
