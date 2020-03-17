@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="myAspect" class="com.imooc.aop.schema.advice.MyAspect"/>
+
+    <bean id="aspectBiz" class="com.imooc.aop.schema.advice.AspectBiz"/>
+
+    <aop:config>
+        <!--配置 aop-->
+        <aop:aspect id="myAspecct" ref="myAspect">
+            <aop:pointcut id="myPointcut" expression="execution(* com.imooc.aop.schema.advice.AspectBiz.*(..))"/>
+            <aop:before method="before" pointcut-ref="myPointcut"/>
+        </aop:aspect>
+
+    </aop:config>
+</beans>
