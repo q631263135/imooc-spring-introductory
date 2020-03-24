@@ -12,6 +12,9 @@
         <aop:aspect id="myAspecct" ref="myAspect">
             <aop:pointcut id="myPointcut" expression="execution(* com.imooc.aop.schema.advice.AspectBiz.*(..))"/>
             <aop:before method="before" pointcut-ref="myPointcut"/>
+            <aop:after method="after" pointcut="execution(* com.imooc.aop.schema.advice.AspectBiz.after(..))"/>
+            <aop:after-returning method="afterReturning" pointcut="execution(* com.imooc.aop.schema.advice.AspectBiz.afterReturning(..))"/>
+            <aop:around method="around" pointcut="execution(* com.imooc.aop.schema.advice.AspectBiz.around*(..))"/>
         </aop:aspect>
 
     </aop:config>
